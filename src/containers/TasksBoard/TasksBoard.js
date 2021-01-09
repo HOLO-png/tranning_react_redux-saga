@@ -73,7 +73,6 @@ class TasksBoard extends Component {
   render() {
     const { classes } = this.props;
     // const [open, setOpen] = React.useState(false);
-    var text = null;
     return (
       <div className={classes.tasksBoard}>
         <Button
