@@ -74,6 +74,7 @@ class TasksBoard extends Component {
     const { classes } = this.props;
     // const [open, setOpen] = React.useState(false);
     var styles = ok;
+    const styles = null;
     return (
       <div className={classes.tasksBoard}>
         <Button
