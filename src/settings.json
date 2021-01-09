@@ -1,0 +1,6 @@
+{
+    // other configs
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
+}
