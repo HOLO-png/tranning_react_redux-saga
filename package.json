@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "linting": "eslint src",
     "prettier": "prettier \"src/**/*.{js,css}\"",
-    "format": "npm run prettier -- --write"
+    "format": "npm run prettier -- --write",
+    "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
   "eslintConfig": {
     "extends": [
