@@ -48,9 +48,7 @@ class TasksBoard extends Component {
           const taskFiltered = LIST_TASKS.filter(
             (task) => task.status === status.value,
           );
-          return (
-            <TasksList tasks={taskFiltered} status={status} index={index} />
-          );
+          return <TasksList tasks={taskFiltered} status={status} key={index} />;
         })}
         ;
       </Grid>
