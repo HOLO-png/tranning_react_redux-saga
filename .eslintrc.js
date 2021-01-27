@@ -65,6 +65,7 @@ module.exports = {
       'react/jsx-props-no-spreading': 0,
       'jsx-a11y/label-has-associated-control': 0,
       'import/no-cycle': 0,
+      'jsx-a11y/anchor-is-valid': 0,
    },
    settings: {
       react: {

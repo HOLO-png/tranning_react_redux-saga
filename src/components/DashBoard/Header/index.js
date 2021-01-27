@@ -10,6 +10,7 @@ import {
    Typography,
    withStyles,
 } from '@material-ui/core';
+import { withRouter } from 'react-router';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -50,6 +51,12 @@ class Header extends Component {
          anchorElMenu: null,
       });
    };
+   handleLogOut = () => {
+      const { history } = this.props;
+      if (history) {
+         history.push('/Login');
+      }
+   };
    renderMenu = () => {
       const { anchorElMenu, menuId } = this.state;
       const isMenuOpen = Boolean(anchorElMenu);
@@ -65,7 +72,7 @@ class Header extends Component {
             onClose={this.handleMenuClose}
          >
             <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
-            <MenuItem onClick={this.handleMenuClose}>LogOut</MenuItem>
+            <MenuItem onClick={this.handleLogOut}>LogOut</MenuItem>
          </Menu>
       );
    };
@@ -200,7 +207,7 @@ class Header extends Component {
       );
    }
 }
-export default withStyles(styles)(Header);
+export default withStyles(styles)(withRouter(Header));
 // show table menu for user see to they may optional
 // to create dashboard then you must create 3 component : 1_Content, 2_header_contain_menu, 3_Sabar(the icon toggle sabar )
 // đây là phần header sài chung cho 2 cái page khác nhau: AdminLayoutPage, TasksBoard, và đối với AdminLayoutPage thì ko có phần header

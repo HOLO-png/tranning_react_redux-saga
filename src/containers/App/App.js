@@ -15,7 +15,8 @@ import configureStore from '../../redux/configureStore';
 import GlobalLoading from '../../components/GlobalLoading/index';
 import ModalCop from '../../components/ModalCop.';
 import AdminLayoutRoute from '../../commons/AdminLayout';
-import { ADMIN_ROUTES } from '../../constants';
+import UserLayoutRoute from './../../commons/UserLayout';
+import { ADMIN_ROUTES, USER_ROUTES } from '../../constants';
 
 const store = configureStore();
 // now they render the routes, to pour container out routes
@@ -41,7 +42,22 @@ class App extends Component {
       });
       return xhtml;
    };
-
+   renderUserRoute = () => {
+      let xhtml = null;
+      xhtml = USER_ROUTES.map((route) => {
+         return (
+            <UserLayoutRoute
+               name={route.name}
+               key={route.path}
+               component={route.component}
+               // exact={route.exact}
+               path={route.path}
+               // icon={route.icon}
+            />
+         );
+      });
+      return xhtml;
+   };
    render() {
       // const {classes} = this.props;
       return (
@@ -54,7 +70,8 @@ class App extends Component {
                      {' '}
                      {/* distingush page taskboard and page Login */}{' '}
                      {/* integration Swich here to show Taskboard, write the method to pay about các route corresponding */}
-                     {this.renderAdminRoute()}{' '}
+                     {this.renderAdminRoute()}
+                     {this.renderUserRoute()}
                      {/* write function here you write like this */}
                      {/* because use common need to create it in commons */}
                      {/* create 2 pageLayout private for 2 function other */}

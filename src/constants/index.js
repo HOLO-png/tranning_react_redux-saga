@@ -1,4 +1,6 @@
 import AdminPageContainer from '../containers/AdminPageContainer';
+import LoginPage from '../containers/LoginPage';
+import SignUpPage from '../containers/SignUpPage';
 import TasksBoard from '../containers/TasksBoard/index';
 export const API_ENDPOINT = 'http://localhost:3000';
 
@@ -52,7 +54,7 @@ export const ADMIN_ROUTES = [
       // create in container because it represent for original 1 page, but 1page be lying in 1 container
    },
    {
-      path: '/task-board',
+      path: '/admin/task-board',
       name: 'Manage word page',
       exact: false,
       component: TasksBoard,
@@ -60,3 +62,15 @@ export const ADMIN_ROUTES = [
       // this is page manage task job
    },
 ]; // after create is complete, you need to add Router in AppContainer, import into the
+export const USER_ROUTES = [
+   {
+      path: '/Login',
+      name: 'Login-user',
+      component: LoginPage,
+   },
+   {
+      path: '/SignUp',
+      name: 'SignUp-user',
+      component: SignUpPage,
+   },
+];

@@ -4,7 +4,7 @@ const styles = (theme) => ({
       flexShrink: 0,
       width: '300px',
       fontSize: 'large',
-      zIndex: 10,
+      zIndex: -1,
    },
    drawerPaper: {
       width: '300px',

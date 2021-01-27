@@ -24,7 +24,7 @@ import TasksForm from '../TasksForm';
 import * as tasksActions from '../../actions/tasks';
 import * as modalActions from '../../actions/modal';
 import SearchTask from '../../components/SearchTask/index';
-import styles from './Styles';
+import styles from './styles';
 
 class TasksBoard extends Component {
    // constructor(props) {
