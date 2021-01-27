@@ -1,3 +1,5 @@
-const styles = () => {};
+const styles = () => ({
+   listTasks: {},
+});
 
 export default styles;
